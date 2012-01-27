@@ -1,0 +1,2 @@
+module PvwattsHelper
+end

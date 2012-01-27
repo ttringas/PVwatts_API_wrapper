@@ -1,0 +1,23 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form .input{
+  margin-left:50px;
+  padding:5px;
+}
+
+label {
+  width:175px;
+  font-weight:bold;
+  padding-top:5px;
+  padding:5px 10px;
+}
+
+#nrel{
+  float:right;
+}
+
+#nrel a, #nrel a:visited {
+  color:#fff;
+}

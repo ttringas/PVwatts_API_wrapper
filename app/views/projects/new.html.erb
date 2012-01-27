@@ -1,0 +1,69 @@
+<div class="content">
+   <div class="page-header">
+     <h1>Page name <small>Supporting text or tagline</small></h1>
+   </div>
+   <div class="row">
+     <div class="span10">
+       <h2>Inputs</h2>
+        <div id="form">
+          <%= simple_form_for @project do |f| %>
+            <%= f.input :address %>
+            <%= f.input :system_size %>
+            <%= f.input :derate %>
+            <%= f.input :tilt %>
+            <%= f.input :federal_tax_rate %>
+            <%= f.input :inflation_rate %>
+            <%= f.input :itc_fed_percent %>
+            <%= f.input :loan_term %>
+            <%= f.input :loan_rate %>
+            <%= f.input :load_debt %>
+            <%= f.input :market %>
+            <%= f.input :system_capacity %>
+            <%= f.input :total_hard_cost %>
+            <%= f.input :total_soft_cost %>
+            <%= f.input :load_escalation %>
+            <%= f.input :system_degradation %>
+            <%= f.input :rate_escalation %>
+            <%= f.input :ur_monthly_fixed_charge %>
+            <%= f.input :ur_flat_buy_rate %>
+    
+            <div id="nrel" class="btn primary large">
+            <%= link_to "Get NREL data", :class => 'btn primary large', :controller => 'pvwatts', :action => 'index', :format => 'json', :address => '201 Bleecker St, NY NY 10012'  %>
+            </div>
+            <div id="project_save">
+            <%= f.button :submit, :label => "Save Project", :class => 'btn danger' %>              
+            </div>
+          <% end %>  
+        </div>
+</div>
+ <div class="span4">
+   <h3>Outputs</h3>
+   <table>
+    <tr>
+      <th>Cost per kW</th>
+      <td id="cost_per_kw"></td>
+    </tr>
+    <tr>
+      <th>Installed Cost</th>
+      <td id="installed_cost"></td>
+    </tr>
+    <tr>
+       <th>LCOE</th>
+       <td id="lcoe"></td>
+     </tr>
+    <tr>
+      <th>NPV</th>
+      <td id="npv"></td>
+    </tr>
+    <tr>
+      <th>Payback Period</th>
+      <td id="payback"></td>
+    </tr>
+    <tr>
+       <th>Elec Output</th>
+       <td id="ann_kwh_yr"></td>
+     </tr>
+   </table>
+ </div>
+</div>
+</div>
